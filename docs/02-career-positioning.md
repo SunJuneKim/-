@@ -34,8 +34,8 @@ Real-time Vision & Embedded Systems Engineer
 | Driver/OS | Linux 디바이스 드라이버, Yocto, SCC 리맵 |
 | Middleware | 상용↔자체 통신카드 호환 레이어 |
 | Application | 운영제어부, 영상 acquisition/display |
-| Integration | 6~7개 구성품, 4PC, NTP/GPS 동기화 |
-| Validation | 3년 현장, 50 arcsec급 정밀도 기여 |
+| Integration | 7구성품+3카메라, 4PC, NTP/GPS 동기화 |
+| Validation | 3년 현장(구현·연동·관측 병행), 50 arcsec급 기여 |
 
 이 스택은 42dot **Software Engineer (AD)** 또는 **AD Framework**가 요구하는  
 "차량 내 분산 SW + 센서 + 실시간 + 현장 검증"과 구조적으로 같습니다.
@@ -61,11 +61,11 @@ Real-time Vision & Embedded Systems Engineer
 
 **2단계 — 시스템 확장 (중기)**  
 Linux/Driver, 운영제어, 영상, DB, 다수 구성품 통합  
-→ 우주물체 1과제 3년 현장 (한화시스템 협업)
+→ **NSLR(차세대 SLR)** 3년 — 운영제어부 **단독**, 거창 현장에서 **구현·연동·관측** 병행
 
 **3단계 — 플랫폼·호환성 (현재)**  
-자체 통신카드 FPGA 호환, HDLC/RS422 다채널, 저궤도 운영제어  
-→ **추상화·미들웨어** 역량으로 진화 중
+호환 레이어 → **드라이버 로직 modify**, HDLC/RS422 8ch, 저궤도 1인 개발  
+→ **추상화·드라이버** 역량으로 심화 중
 
 ### 차별화 메시지
 
@@ -82,8 +82,8 @@ Linux/Driver, 운영제어, 영상, DB, 다수 구성품 통합
 
 | 프로젝트 | 이력서 비중 | 강조 축 |
 |----------|-------------|---------|
-| 우주물체 1과제 | **40%** | 카메라·동기화·통합·현장 |
-| XMC HDLC 통신카드 | **30%** | C/Linux 드라이버·호환 레이어·디버깅 |
+| NSLR (차세대 SLR) | **40%** | 단독 운영제어·동기화·별보정·현장 개발 |
+| XMC HDLC 통신카드 | **30%** | 호환레이어 단독 → 드라이버 modify |
 | 저궤도 우주물체 | **20%** | WPF·Cesium·운영제어 확장 |
 | 지능형 조준경 | **5%** | Yocto 부팅·영상전시 (보류 명시) |
 | 기타 시험 프로그램 | **5%** | 센서 R&D 범용성 |

@@ -20,19 +20,19 @@
 
 **실시간 영상·센서 통합 / 임베디드 시스템 엔지니어 (7년)**
 
-펌웨어·Linux 디바이스 드라이버에서 운영제어·영상 파이프라인, 현장 통합·검증까지 **장비 시스템 전 스택**을 경험했습니다. 3년간 우주물체 추적·정밀측정 시스템 운영제어부를 개발·현장 운영하며, 다수 구성품·다채널 카메라의 **실시간 동기화(NTP/GPS)** 및 **ns급 타이밍 이슈** 대응 역량을 쌓았습니다. 현재는 상용 통신카드를 자체 FPGA 카드로 대체하는 **드라이버 호환 레이어** 및 **8채널 RS422/HDLC** 통신을 담당하고 있습니다.
+펌웨어·Linux 드라이버에서 운영제어·영상 파이프라인, **현장 구현·실장비 연동·관측 운영**까지 장비 시스템 전 스택을 경험했습니다. 약 3년간 **차세대 SLR(Satellite Laser Ranging)** 시스템 운영제어부를 **단독** 설계·개발·운영하며, 7개 구성품·3종 카메라의 **NTP/GPS ns급 시간동기화**, 별보정·위성 트래킹 로직을 담당했습니다. 현재는 상용 통신카드 대체 프로젝트에서 **호환 레이어·응용 SW**를 구축하고 **드라이버 로직**을 직접 수정 중입니다.
 
-**Core:** C/C++, Linux, Camera/Vision pipeline, Multi-sensor integration, Real-time control, Yocto, PostgreSQL, Field deployment
+**Core:** C/C++, Linux/Driver, Camera/Vision pipeline, Multi-sensor integration, Real-time sync, Yocto, PostgreSQL, Field deployment
 
 ---
 
 ## 핵심 역량
 
-- **실시간 시스템 통합**: 6~7개 구성품, 4PC 분산 아키텍처, TCP/UDP, NTP/GPS 동기화
-- **영상 시스템**: MWIR/CCD/EMCCD acquisition, OpenCV (AGC, ROI, Mono8), overlay, thermal
-- **임베디드**: Linux C driver, Yocto, FPGA 통신카드 레지스터 호환, SCC 리맵
-- **보정·정밀도**: 별보정(calibration) 파라미터 분석·튜닝, 50 arcsec 이하 기여
-- **현장·검증**: 2년+ 협력사 현장 상주, 설치·유지보수·디버깅
+- **운영제어부 단독 개발**: 7구성품 + 3카메라, 4PC 분산, NTP/GPS ns급 동기화, 별보정·트래킹 로직
+- **현장 풀스택**: 거창 2년 — 구현·실장비 디버깅·관측 운영 병행 (한화시스템 협업)
+- **영상**: MWIR/CCD/EMCCD, OpenCV (AGC, ROI), thermal pipeline
+- **임베디드**: Linux C driver modify, 호환 레이어, Yocto, RS422/HDLC 8ch
+- **궤도 UI**: Cesium, TLE/SGP4 (저궤도 프로젝트)
 
 ---
 
@@ -41,28 +41,26 @@
 ### (주)_______ | 실시간 시스템 / 영상 / 임베디드 엔지니어
 **20__ ~ 현재**
 
-#### 프로젝트 A: 우주물체 추적·정밀측정 시스템 (NSLR) | 2023.01 – 2025.10
-- NSLR 시스템 **운영제어부** 개발 (2명, 한화시스템 협업, 거창 현장)
-- 3종 카메라(MWIR/CCD/EMCCD) acquisition·OpenCV 전처리(AGC/ROI)·전시
-- 6개 구성품 실시간 통신·동기화, NTP/GPS 기반 시간 동기화, 마운트 20ms 제어, 위성 트래킹
-- 별보정 라이브러리 파라미터 분석·최적화 → **50 arcsec 이하** 정밀도 기여
-- 4PC(관측/전시/처리/관리) 분산 구조, PostgreSQL 운영 DB, 대기환경 센서 데이터 관리
-- 아키텍처 제약 하 timing jitter 최소화 튜닝으로 운영 안정성 확보
+#### 프로젝트 A: 차세대 SLR(NSLR) 운영제어부 | 2023.01 – 2025.10
+- **NSLR** — 차세대 **Satellite Laser Ranging** 시스템 운영제어부 **단독** 설계·개발·현장 운영 (거창, 한화시스템)
+- **7구성품**(이벤트타이머·광전자·레이저·마운트·항공탐지·대기환경·타과제 외부망) + **3카메라** 실시간 연동
+- **시간동기화·별보정 운용·로직·이벤트타이머·트래킹** 전반 담당 (마운트 엔코더 정밀 서브루프 제외)
+- NTP/GPS **ns급** 동기화, MWIR/CCD/EMCCD 영상·OpenCV, **50 arcsec 이하** 정밀도 기여
+- 현장에서 **구현·실장비 연동·관측** 전 과정 수행 — timing jitter 튜닝으로 운영 안정화
 
-#### 프로젝트 B: XMC 자체 HDLC/RS422 통신카드 | 2025.10 – 현재
-- 상용 드라이버(tdrv009/002) → 자체 FPGA 카드 **Linux 호환 레이어** (2명)
-- RS422 7ch + HDLC 1ch, HDLC 50B@200Hz / RS422 200B@1Hz
-- 레거시 유저 앱 무수정 호환 (자체 앱); 업체 레거시 앱 HDLC stash/split 이슈 디버깅 중
+#### 프로젝트 B: XMC HDLC/RS422 통신카드 | 2025.10 – 현재
+- 상용(tdrv009/002) → 자체 FPGA: **호환 레이어·응용 SW 단독** 개발
+- RS422 7ch + HDLC 1ch (50B@200Hz / 200B@1Hz)
+- 레거시 업체 앱 호환: **드라이버 로직 직접 modify** (HDLC stash/split)
 
 #### 프로젝트 C: 저궤도 우주물체 운영제어부 | 2026.01 – 현재
-- 운영제어부 **1인 개발**: 7구성품, 3카메라, Cesium 궤도 추적, 조이스틱 마운트 제어 (WPF/C#)
+- **1인 개발**: 7구성품 **UDP**, 3카메라, **Cesium·TLE/SGP4**, 조이스틱 (WPF)
 
 #### 프로젝트 D: 지능형 조준경 사내화 | 2025.10 – 2026.01
-- Yocto 이미지 빌드, 부팅·영상 전시 (프로젝트 보류)
+- Yocto 빌드, 부팅·영상전시 (보류)
 
 #### 기타
-- 자이로 센서 등 다수 R&D **시험용 프로그램** 제작
-- 펌웨어·HW, Linux driver 초기 경력
+- 자이로 센서 등 R&D 시험 프로그램, 펌웨어·Linux driver 초기 경력
 
 ---
 
@@ -71,31 +69,23 @@
 | 분류 | 기술 |
 |------|------|
 | Language | C, C++, C#, Python |
-| OS/Embedded | Linux, Yocto, Device Driver |
-| Vision | OpenCV, Camera SDK (MWIR/CCD/EMCCD) |
+| OS/Embedded | Linux, Driver, Yocto, FPGA comms |
+| Vision | OpenCV, MWIR/CCD/EMCCD SDK |
 | DB | PostgreSQL |
-| UI | WinForms, WPF, Cesium |
-| Network | TCP/IP, UDP, RS422, HDLC, NTP/GPS |
-| Domain | Real-time sync, Calibration, System integration |
+| UI | WinForms, WPF, Cesium (TLE/SGP4) |
+| Network | TCP/UDP, RS422, HDLC, NTP/GPS |
+| Domain | SLR, Real-time sync, Calibration, System integration |
 
 ---
 
-## 학력
+## 학력 / 어학 / 포트폴리오
 (작성 필요)
 
----
-
-## 자격증 / 어학
-(작성 필요 — 영어: 기술면접 준비 중)
-
----
-
-## 포트폴리오 / 링크
 - [ ] ROS2 mini project (예정)
-- [ ] GitHub: (공개 가능 프로젝트)
 
 ---
 
 ## 작성 메모
-- 42dot 제출: PDF 30MB↓, 사진·연봉·주민번호 제외
-- 방산 세부 스펙 삭제, 성과 위주
+- "현장 상주" → **구현·연동·관측 병행** 강조 (유지보수만 X)
+- 마운트 **엔코더 정밀도**는 본인 영역 아님 — 과장 금지
+- 42dot: PDF 30MB↓, 금지정보 제외
