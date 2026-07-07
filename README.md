@@ -29,6 +29,8 @@ questionnaire/  # 추가 정보 요청 및 답변 기록
 - [학습 로드맵](docs/04-learning-roadmap.md)
 - [면접·코딩테스트 준비](docs/05-interview-prep.md)
 - [경력기술서 초안](resume/career-summary-draft.md)
+- [**NSLR 이력서 문구 (경력직 어필)**](resume/nslr-resume-bullets.md)
+- [NSLR 소스 담당 범위](projects/01-nslr-code-ownership.md)
 - [추가 정보 요청 질문지](questionnaire/pending-questions.md)
 
 ## 작업 흐름
