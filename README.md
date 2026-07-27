@@ -1,49 +1,60 @@
-# 경력기술서 · 이직 준비 (타겟: 포티투닷 / 42dot)
+# 경력기술서 · 이직 준비 (멀티 타겟)
 
-> **비공개 저장소** — 어느 환경에서나 이직 준비 자료를 이어서 작업할 수 있습니다.
+> 양산형 이력서 시스템 — 회사별 폴더에 저장, 마스터 프로필에서 변환
 
-## 현재 상태
+---
 
-| 항목 | 내용 |
-|------|------|
-| **타겟 기업** | [포티투닷(42dot)](https://42dot.ai/careers/openroles) |
-| **추천 1순위 직무** | Software Engineer (Autonomous Driving) |
-| **추천 2순위 직무** | Software Engineer (AD Framework) |
-| **경력 연차** | 7년차 (추정) |
-| **핵심 강점** | 실시간 영상·센서 통합, 운영제어, Linux/Driver, 현장 검증 |
+## 현재 타겟
+
+| 회사 | 직무 | 상태 | 문서 |
+|------|------|------|------|
+| **계양전기** | SW 설계 엔지니어 | 🟡 **오늘 제출** | [`companies/gyeyang-electric/`](companies/gyeyang-electric/) |
+| 포티투닷 (42dot) | Software Engineer (AD) | 보류 | [`docs/01-target-company-42dot.md`](docs/01-target-company-42dot.md) |
+
+---
 
 ## 디렉터리 구조
 
 ```
-docs/           # 전략·분석·학습 로드맵
-projects/       # 프로젝트별 상세 경력 (경력기술서 원본)
-resume/         # 이력서·자기소개서 초안
-questionnaire/  # 추가 정보 요청 및 답변 기록
+framework/          # 마스터 프로필, 양산 템플릿, 키워드 매핑
+companies/          # 회사별 분석·이력서·체크리스트
+  gyeyang-electric/ ← 오늘
+docs/               # 42dot 등 이전 분석
+projects/           # 프로젝트 상세 (NSLR 등)
+resume/             # 공통 이력서 초안
+questionnaire/
 ```
 
-## 빠른 링크
+---
 
-- [포티투닷 타겟 분석](docs/01-target-company-42dot.md)
-- [직무 포지셔닝](docs/02-career-positioning.md)
-- [7년차 갭 분석](docs/03-gap-analysis-7y.md)
-- [학습 로드맵](docs/04-learning-roadmap.md)
-- [면접·코딩테스트 준비](docs/05-interview-prep.md)
-- [경력기술서 초안](resume/career-summary-draft.md)
-- [**NSLR 이력서 문구 (경력직 어필)**](resume/nslr-resume-bullets.md)
-- [NSLR 소스 담당 범위](projects/01-nslr-code-ownership.md)
-- [추가 정보 요청 질문지](questionnaire/pending-questions.md)
+## 빠른 링크 — 계양전기 (오늘)
 
-## 작업 흐름
+1. [3직군 비교·추천·반론](companies/gyeyang-electric/02-roles-comparison.md)
+2. [갭 분석·보강 계획](companies/gyeyang-electric/03-gap-analysis-by-role.md)
+3. [**SW 설계 이력서 제출용**](companies/gyeyang-electric/04-resume-sw-design.md) ← PDF 변환
+4. [제출 체크리스트](companies/gyeyang-electric/05-prep-checklist.md)
 
-1. `questionnaire/pending-questions.md`에 답변 추가
-2. `projects/` 각 파일 보강 → `resume/career-summary-draft.md` 반영
-3. 포티투닷 공고 URL 확정 후 `docs/01-target-company-42dot.md` 업데이트
-4. PDF 이력서는 30MB 이하, 민감정보 제외 ([채용 가이드](https://42dot.ai/careers/openroles))
+---
+
+## 빠른 링크 — 공통
+
+- [마스터 프로필](framework/00-master-profile.md)
+- [양산형 이력서 시스템](framework/01-resume-template-system.md)
+- [자동차 키워드 매핑](framework/02-keyword-mapping-automotive.md)
+- [NSLR 이력서 문구](resume/nslr-resume-bullets.md)
+
+---
+
+## 워크플로 (회사 추가 시)
+
+```
+1차 필터(연봉·전망) → companies/<회사>/ 생성 → 2시간 이내 이력서 초안 → PDF 제출
+```
+
+---
 
 ## 다음 할 일
 
-- [ ] 질문지 답변 완료
-- [ ] 우주물체 1과제 정량 성과 수치 확정 (50 arcsec 등)
-- [ ] ROS2 미니 프로젝트 1개 (GitHub 공개용, 이력서 링크)
-- [ ] 코딩테스트 알고리즘 복습 (SW Engineer AD 지원 시)
-- [ ] 영어: 기술 면접 대비 스크립트 작성
+- [ ] 계양전기 이력서 PDF 제출
+- [ ] AUTOSAR/CAN 1주 학습 (면접 대비)
+- [ ] NSLR STAR 사례 1건
