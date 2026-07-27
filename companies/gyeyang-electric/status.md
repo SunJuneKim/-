@@ -8,4 +8,5 @@
 | 이력서 | [`04-resume-sw-design.md`](04-resume-sw-design.md) |
 | 공고 URL | (제출 시 기록) |
 | 제출일 | |
-| 전형 결과 | |
+| 이력서 원본 | `이력서_fly881004.pdf` → `04-resume-sw-design.md` 반영 완료 |
+| 지원자 | 김선준, 7년3개월, 신보 선임 |
