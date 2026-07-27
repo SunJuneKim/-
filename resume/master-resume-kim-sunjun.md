@@ -57,3 +57,4 @@ MDS 임베디드 과정 (2016)
 |------|------|
 | 계양전기 SW설계 | `companies/gyeyang-electric/04-resume-sw-design.md` |
 | 42dot AD | `resume/career-summary-draft.md` (업데이트 필요) |
+| 경력 공백 면접 | `resume/career-gap-2021-2023.md` |
