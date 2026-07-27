@@ -1,4 +1,6 @@
-# 프로젝트 2: XMC HDLC 통신카드 (자체 통신카드 대체)
+# 프로젝트 2: IRST (통신카드 대체)
+
+> **NSLR과 별개.** 상세: [`02-irst-comms-card.md`](02-irst-comms-card.md)
 
 ## 개요
 

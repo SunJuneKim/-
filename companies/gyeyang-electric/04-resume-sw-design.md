@@ -1,101 +1,91 @@
 # 김선준 — 계양전기 SW 설계 엔지니어 (제출용)
 
-> **지원:** 전장 SW 설계 (임베디드 SW · MBD · BSW / Mobilion AUTOSAR)  
-> PDF 변환용 · 2페이지 목표 · 사진·연봉·주민번호 미포함
+> **지원:** 전장 SW 설계 (임베디드 SW · MBD · BSW)  
+> PDF 2페이지 · 사진·연봉 미포함
 
 ---
 
 ## 김선준
 
-**Embedded / Real-time Systems Engineer** · 7년 3개월  
+선임연구원 · 경력 7년 3개월  
 fly881004@naver.com · 010-4377-1920 · 경기 성남시 분당구
 
 ---
 
 ## Summary
 
-MCU 기반 **임베디드 제어**에서 **다모듈 실시간 시스템 통합·저수준 SW**까지 7년 이상 경험한 선임 연구원입니다. STM32/MSP430 펌웨어·**Calibration**·통신(SPI/UART/Modbus) 개발로 시작해, 현재는 **7개 서브시스템 실시간 연동**, **NTP/GPS ns급 동기화**, **20ms 제어 루프**, **Linux 통신 드라이버 수정** 및 **레거시 SW 호환 추상화 레이어**를 담당합니다. 2년 이상 **현장 ECU급 통합·검증(TRR·납품)** 을 병행했으며, 자동차 전장 **모터 ECU SW(임베디드·BSW)** 분야로 경력을 확장합니다.
+**Linux 드라이버와 실시간 통합 SW를 다루는 임베디드 엔지니어입니다.**
+
+**IRST (통신카드 교체)**  
+상용 통신카드를 자체 FPGA 카드로 바꾸는 프로젝트에서 호환 레이어, 드라이버, 검증용 앱을 맡았습니다. RS422는 tty, HDLC는 ioctl로 연동했고, 드라이버는 FIFO에서 **원형 큐**로 바꿨습니다. HDLC 0바이트 수신, RS422 데이터가 쪼개져 들어오는 문제는 상위 앱을 고칠 수 없어 **드라이버에서 패킷을 나눠 처리**하는 방식으로 줄였습니다. **70시간 이상 연속 가동** 검증 후 납품했습니다.
+
+**NSLR (차세대 우주물체 레이저 거리측정)**  
+7개 구성품 제어·동기화, 지상보정·별보정 연동, 운영제어 SW를 담당했습니다. 시스템 설계가 처음인 과제라 논문·자료를 찾아가며 운영제어부를 맞춰 갔고, **2년 이상 현장(TRR)** 에서 개발과 연동을 함께 했습니다.
+
+**그 이전**  
+에너시스에서 STM32 보드(전압·전류 카드) 보정·통신, ATE 자동화(시험 시간 1/10)를 했습니다.  
+자동차 전장 **모터 ECU·임베디드 SW** 쪽으로 이어가고 싶습니다.
 
 ---
 
-## Core Skills
+## Skills
 
-**Language:** C (MCU, Linux driver), C#, Python, C++  
-**Embedded:** STM32, MSP430, Linux device driver, Yocto, register-level HW integration  
-**Communication:** TCP/UDP, RS422, HDLC, SPI, UART, Modbus RTU, RS232  
-**Real-time:** Multi-subsystem integration, event scheduling, deterministic timing, closed-loop calibration  
-**Tools:** ATE sequence, PostgreSQL, Git, test automation (Python/C#)  
-**Learning:** AUTOSAR Classic (BSW/RTE/ASW), CAN/LIN, ISO 26262 overview
+C · Linux driver · C# · Python · RS422/HDLC · TCP/UDP · Yocto · STM32  
+*(학습 중: AUTOSAR BSW, CAN/LIN)*
 
 ---
 
-## Experience
+## 경력
 
-### ㈜신보 · 소프트웨어팀 · 선임연구원 | 2023.01 – Present
+### ㈜신보 · 소프트웨어팀 · 선임연구원 | 2023.01 – 현재
 
-#### NSLR — Satellite Laser Ranging 운영제어 SW | 2023.01 – Present
-*Multi-subsystem real-time control platform (7 modules + multi-sensor)*
+**IRST — 통신카드 대체 (Linux driver · 호환 레이어)** | 2025.10 –  
+- 상용(tdrv009/002) → 자체 FPGA. **호환 레이어·검증 앱 단독**
+- RS422 7ch(tty) + HDLC 1ch(ioctl). 드라이버 **FIFO → 원형 큐**
+- 0byte·분할 수신 → 드라이버 **헤더 기반 패킷 파싱** (앱 수정 불가)
+- **70시간+ 연속 가동** 후 납품
 
-- **System logic owner** (except scheduler): design, implementation, **2+ years field deployment** (TRR, delivery)
-- Integrated **7 subsystems** via Ethernet (TCP/UDP): event timer, optoelectronics, laser, mount, detection, environment, external network
-- **Deterministic time sync** (NTP/GPS), **20ms real-time control loop**, closed-loop calibration → **≤50 arcsec** precision contribution
-- Application & operation logic (C#, WinForms); Python/PostgreSQL **data analysis**; external **.dll library** integration
-- **Tech lead:** scheduler module (teammate dev) — interface, timing, integration guide
-- **Leadership:** 4× customer PM changes — requirements analysis, stabilization; voluntary **Python analysis tool** during blocked test windows
-- On-site: **SW development + HW integration debug + operational validation** (not maintenance-only)
+**NSLR — 차세대 SLR 운영제어** | 2023.01 – 2025.10  
+- **운영제어 SW 오너** (스케줄러 제외). 7구성품 제어·동기화
+- 지상보정·별보정 연동, NTP/GPS 시간동기화, 위성/우주물체 지향 관측 시퀀스
+- C# 운영 UI, Python/PostgreSQL 데이터 분석, .dll 라이브러리 통합
+- 스케줄러 모듈: 동료 개발, 본인 **인터페이스·통합 가이드**
+- 거창 현장 **TRR** — 개발·실장비 연동 병행
 
-#### XMC Communication Card Migration | 2025.10 – Present
-- Commercial → in-house FPGA card: **compatibility layer & apps (sole owner)**
-- RS422 ×7 + HDLC ×1; **low-level driver logic modification** (legacy app HDLC framing)
-
-#### LEO Tracking Control SW | 2026.01 – Present
-- Solo: 7-subsystem UDP integration, multi-camera, WPF/Cesium orbit UI
-
-#### Embedded Platform (Yocto) | 2025.10 – 2026.01
-- Image build, boot, video pipeline (project paused)
+**저궤도 운영제어** | 2026.01 – | 1인, UDP, WPF/Cesium  
+**Yocto 영상 플랫폼** | 2025.10 – 2026.01 | 부팅·영상 (보류)
 
 ---
 
-### ㈜아트랩소프트 · SE부서 · 주임 | 2019.06 – 2021.03
-
-#### Nuclear ESF-CCS System — SW Verification | 2019.06 – 2020.06
-- Verification planning, test case design, unit/integration/system test execution
-- *Quality & V-model mindset — applied to current integration validation*
+### ㈜아트랩소프트 · 주임 | 2019.06 – 2021.03
+원자력 ESF-CCS SW 검증 — 단위/통합/시스템 시험, 테스트케이스 설계
 
 ---
 
-### 에너시스㈜ · 부설연구소 · 연구원 | 2017.06 – 2019.03
+### 에너시스㈜ · 연구원 | 2017.06 – 2019.03
 
-#### Voltage/Current I/O Card | 2017.06 – 2017.11
-- **STM32** firmware: SPI/UART, Median/Moving-Avg filter, **calibration** (4-20mA, lookup table, temp compensation)
-- Precision tuning, PCB assembly support, chamber test
-
-#### Apartment Shelter System | 2017.12 – 2018.04
-- **MSP430**: Modbus RTU, RS232, multi-SPI/I2C, ADC, GUI
-- Sensor circuit tuning, **EMI certification** support
-
-#### SSILS Electronic Card Module | 2018.06 – 2018.11
-- **ATE (Auto Test Environment)** sequence design & implementation
-- **160 hours** investment → test time reduced to **1/10**; annual 100-unit production test support
+**전압·전류 I/O 카드** — STM32, SPI/UART, 4-20mA **보정**, Lookup Table  
+**대피소 시스템** — MSP430, Modbus RTU, EMI 인증 지원  
+**SSILS 전자카드** — ATE 시퀀스, 시험시간 **1/10** 단축
 
 ---
 
-## Education
+## 학력
 
-**서울과학기술대학교** · 전자미디어IT공학과 · 학사 (2008–2015, 3.2/4.5)  
-**MDS아카데미** · 임베디드 시스템 개발자 양성과정 (2016.07–2016.11)
-
----
-
-## 자기소개 (지원 동기 — 약 400자)
-
-저는 **MCU 펌웨어(Calibration·통신)** 로 시작해 **대규모 실시간 통합 시스템**까지 경험한 임베디드 엔지니어입니다. 현재 NSLR 운영제어에서 7개 모듈 연동·ns급 동기화·현장 TRR/납품을 수행했고, 통신카드 프로젝트에서는 **드라이버 호환 레이어·저수준 수정**을 담당하고 있습니다. 에너시스 시절 **STM32 제어·보정**과 **ATE 자동화(시험시간 1/10)** 경험은 계양전기 **모터 ECU·전장 SW**와 직결됩니다. AUTOSAR BSW(Mobilion)와 MBD는 입사 후 집중 학습할 영역이며, **통합·드라이버·현장 검증** 역량으로 빠르게 기여하겠습니다.
+서울과학기술대학교 전자미디어IT공학과 (2008–2015)  
+MDS아카데미 임베디드 과정 (2016)
 
 ---
 
-## 제출 체크
+## 자기소개 (짧게)
 
-- [x] 인적사항 반영
-- [ ] 공고별 희망연봉·주소 생략 확인
-- [ ] PDF 2페이지 압축 (필요 시 아트랩 1줄로 축소)
-- [ ] 파일명: `김선준_계양전기_SW설계_경력.pdf`
+에너시스에서 STM32 보드와 시험 자동화로 시작해, 신보에서는 **NSLR 운영제어**와 **IRST 통신카드 드라이버**를 맡았습니다. IRST에서는 앱을 못 고치는 조건에서 드라이버로 통신 이슈를 잡아 **70시간 가동 후 납품**했고, NSLR에서는 구성품이 많은 통합 시스템을 현장까지 끌고 갔습니다. 계양전기 **모터 ECU SW**는 제가 해온 **드라이버·통합·현장 검증**과 같은 길이라고 봅니다.
+
+---
+
+## Summary 후보 (더 짧게 쓰고 싶을 때)
+
+> Linux 드라이버·실시간 통합 SW 7년.  
+> IRST: 통신카드 교체, FIFO→원형큐, 70h 가동 납품.  
+> NSLR: 레이저 거리측정 운영제어, 7구성품 통합·현장 TRR.  
+> 자동차 전장 ECU SW로 이어가고 싶습니다.
