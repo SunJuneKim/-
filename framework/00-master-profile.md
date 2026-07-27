@@ -46,7 +46,12 @@
 
 ## 신보 프로젝트 (상세)
 
-### NSLR — 우주물체 SLR 운영제어 (2023.01–현재, 핵심)
+### IRST (2026.01 – 2026.06)
+- 호환 레이어, Linux driver, 검증 앱 — **실질 단독**
+- 1–2월 맵핑 / 3월 HIL·1차납품 / 요구변경(8ch 동시) ~6월 재작업
+- tty, ioctl, FIFO→원형큐, 70h 연속가동
+
+### NSLR (2023.01 – 2025.10)
 - **시스템 로직 단독** (Scheduler 제외) / Scheduler **사수**
 - 7구성품 + 3카메라, NTP/GPS ns급, 50 arcsec, TRR·납품 기여
 - C# WinForms, TCP/UDP, PostgreSQL, Python 분석, .dll 통합

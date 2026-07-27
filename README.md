@@ -29,7 +29,8 @@ questionnaire/
 
 ## 빠른 링크 — 계양전기 (오늘)
 
-1. [3직군 비교·추천·반론](companies/gyeyang-electric/02-roles-comparison.md)
+0. **[경력기술서 본문](resume/career-technical-resume.md)** ← **가장 중요**
+1. [1페이지 요약](companies/gyeyang-electric/04-resume-sw-design.md)
 2. [갭 분석·보강 계획](companies/gyeyang-electric/03-gap-analysis-by-role.md)
 3. [**SW 설계 이력서 제출용**](companies/gyeyang-electric/04-resume-sw-design.md) ← PDF 변환
 4. [제출 체크리스트](companies/gyeyang-electric/05-prep-checklist.md)
@@ -38,6 +39,7 @@ questionnaire/
 
 ## 빠른 링크 — 공통
 
+- **[경력기술서 (본문 원본)](resume/career-technical-resume.md)** ← 경력직 제출용
 - [마스터 프로필](framework/00-master-profile.md)
 - [양산형 이력서 시스템](framework/01-resume-template-system.md)
 - [자동차 키워드 매핑](framework/02-keyword-mapping-automotive.md)
