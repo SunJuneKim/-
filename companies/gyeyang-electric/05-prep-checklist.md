@@ -14,8 +14,10 @@
 
 ## 제출 전 (본인)
 
-- [ ] `04-resume-sw-design.md` → 인적사항·학력·회사명 입력
-- [ ] PDF 변환 (2페이지 이내)
+- [x] `04-resume-sw-design.md` → 인적사항·학력·회사명 입력
+- [x] `career-technical-resume.md` 경력기술서 작성
+- [x] `07-cover-letter.md` 지원동기 작성
+- [ ] PDF 변환 (이력서 2페이지 이내 + 경력기술서 별첨)
 - [ ] 공고 URL 확인 후 `status.md` 기록
 - [ ] 잡코리아/인크루트 지원
 
