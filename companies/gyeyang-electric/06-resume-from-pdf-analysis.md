@@ -1,6 +1,6 @@
 # 기존 PDF 이력서 분석 · 계양전기용 개선점
 
-> 원본: `이력서_20260731.pdf` (2026-07-31 웍스피어 형식)  
+> 원본: [`resume/pdf/이력서_20260731.pdf`](../../resume/pdf/이력서_20260731.pdf) (2026-07-31 웍스피어 형식)  
 > 개선본: [`04-resume-sw-design.md`](04-resume-sw-design.md) + [`resume/career-technical-resume.md`](../../resume/career-technical-resume.md)
 
 ---

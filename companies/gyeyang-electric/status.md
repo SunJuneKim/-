@@ -5,10 +5,11 @@
 | 1차 필터 | ✅ (본인 판단) |
 | 지원 직무 | **전장 SW 설계 엔지니어** |
 | 미지원 | 시스템 설계, SW 검증 |
-| **이력서** | [`04-resume-sw-design.md`](04-resume-sw-design.md) |
+| **이력서 (md)** | [`04-resume-sw-design.md`](04-resume-sw-design.md) |
+| **이력서 (PDF 원본)** | [`resume/pdf/이력서_20260731.pdf`](../../resume/pdf/이력서_20260731.pdf) |
 | **경력기술서** | [`resume/career-technical-resume.md`](../../resume/career-technical-resume.md) |
 | **지원동기** | [`07-cover-letter.md`](07-cover-letter.md) |
-| PDF 원본 | `이력서_20260731.pdf` → 2026-07-31 개선 완료 |
+| PDF 분석 | [`06-resume-from-pdf-analysis.md`](06-resume-from-pdf-analysis.md) |
 | 지원자 | 김선준, 7년3개월, 신보 선임 |
 | 제출일 | **2026-07-31** (오늘) |
 | 공고 URL | (제출 시 기록) |

@@ -20,6 +20,10 @@ companies/
     04-resume-<직무>.md     ← 제출용 초안
     05-prep-checklist.md
     status.md               ← 지원 상태 추적
+
+resume/
+  pdf/                      ← 제출 PDF 원본 (이력서_YYYYMMDD.pdf)
+  career-technical-resume.md
 ```
 
 ---

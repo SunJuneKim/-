@@ -22,6 +22,7 @@ companies/          # 회사별 분석·이력서·체크리스트
 docs/               # 42dot 등 이전 분석
 projects/           # 프로젝트 상세 (NSLR 등)
 resume/             # 공통 이력서 초안
+  pdf/              # 제출용 PDF 원본 (이력서_YYYYMMDD.pdf)
 questionnaire/
 ```
 
@@ -41,6 +42,7 @@ questionnaire/
 - [마스터 프로필](framework/00-master-profile.md)
 - [양산형 이력서 시스템](framework/01-resume-template-system.md)
 - [자동차 키워드 매핑](framework/02-keyword-mapping-automotive.md)
+- [이력서 PDF 보관](resume/pdf/) — `이력서_20260731.pdf`
 - [NSLR 이력서 문구](resume/nslr-resume-bullets.md)
 
 ---
