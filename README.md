@@ -8,7 +8,8 @@
 
 | 회사 | 직무 | 상태 | 문서 |
 |------|------|------|------|
-| **계양전기** | SW 설계 엔지니어 | 🟡 **오늘 제출** | [`companies/gyeyang-electric/`](companies/gyeyang-electric/) |
+| **이오테크닉스** | 장비 SW | 🟡 **면접 예정** | [`companies/io-technics/`](companies/io-technics/) |
+| **계양전기** | SW 설계 엔지니어 | 제출 완료 | [`companies/gyeyang-electric/`](companies/gyeyang-electric/) |
 | 포티투닷 (42dot) | Software Engineer (AD) | 보류 | [`docs/01-target-company-42dot.md`](docs/01-target-company-42dot.md) |
 
 ---
@@ -28,7 +29,14 @@ questionnaire/
 
 ---
 
-## 빠른 링크 — 계양전기 (오늘)
+## 빠른 링크 — 이오테크닉스 (면접)
+
+1. [회사·직무 분석](companies/io-technics/01-company-analysis.md)
+2. [**자기소개서 (제출용)**](companies/io-technics/07-cover-letter.md)
+3. [면접 준비·예상 질문](companies/io-technics/05-interview-prep.md)
+4. [경력기술서 PDF](resume/pdf/경력기술서_김선준_GUI_20260815.pdf)
+
+## 빠른 링크 — 계양전기
 
 1. [3직군 비교·추천·반론](companies/gyeyang-electric/02-roles-comparison.md)
 2. [갭 분석·보강 계획](companies/gyeyang-electric/03-gap-analysis-by-role.md)
