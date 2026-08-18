@@ -21,6 +21,7 @@ companies/          # 회사별 분석·이력서·체크리스트
   gyeyang-electric/ ← 오늘
 docs/               # 42dot 등 이전 분석
 projects/           # 프로젝트 상세 (NSLR 등)
+portfolio/          # 장비 SW 아키텍처 참고 · 개인 프로젝트 방향 (ChatGPT 피드백)
 resume/             # 공통 이력서 초안
   pdf/              # 제출용 PDF 원본 (이력서_YYYYMMDD.pdf)
 questionnaire/
